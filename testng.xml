@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="XYZBank" parallel="classes" thread-count="1">
+    <listeners>
+        <listener class-name="com.XYZBank.Listner.AllureListener"/>
+        <listener class-name="com.XYZBank.Listner.MyAnnotationTransformer"/>
+    </listeners>
+
+
+    <test name="Admin Dasboard">
+        <classes>
+            <class name="com.XYZBank.testcases.AdminDashboardTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Bank manager Login">
+        <classes>
+            <class name="com.XYZBank.testcases.BankManagerLoginTest">
+                <methods>
+                    <include name="verifyButton"/>
+                    <include name="createNewCustomer"/>
+                    <include name="openCustomerAcc"/>
+                    <include name="customerstableVerification"/>
+                    <include name="verifyCustomerSorting"/>
+                    <include name="verifyDeletedUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Customer Login">
+        <classes>
+            <class name="com.XYZBank.testcases.CustomerLoginTest">
+                <methods>
+                    <include name="customerLogin"/>
+                    <include name="verifyCustomerDetails"/>
+                    <include name="depositTabverification"/>
+                    <include name="withDrawlSuccessMsgverification"/>
+                    <include name="verifyTransactionTable"/>
+                    <include name="withDrawlFailureMsgverification"/>
+                    <include name="verifybuttonFunctionality"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
