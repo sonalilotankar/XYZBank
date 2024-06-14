@@ -10,7 +10,7 @@ Tools:
 IntelliJ
 
 To fetch Allure reports, run the following command:
-Allure serve allure-results
+Allure serve <folder Name>
 
 Note: make sure your path should not have any space while running allure command.
 
